@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+nav {
+  grid-area: nav;
+  background-color: rgb(73, 73, 221);
+  color: white;
+}
+section {
+  grid-area: section;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+}
+main {
+  grid-area: main;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+}
+footer {
+  grid-area: footer;
+  background-color: rgb(36, 36, 219);
+}
+body {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "nav" "section" "main" "footer";
+}
+@media (min-width: 576px) {
+  body {
+    grid-template-areas:
+      "nav section"
+      "nav main"
+      "footer main";
+    grid-template-columns: 1fr 4fr;
+  }
+  main {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 25px;
+  }
+}
+.flexnav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  padding: 10px 10px;
+}
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: solid 1px rgb(189, 189, 189);
+  padding: 20px;
+}
+.grid-item button {
+  color: white;
+  background-color: rgb(59, 59, 163);
+  width: 200px;
+}
+footer {
+  color: white;
+  text-align: center;
+  padding: 20px 0px;
+}
